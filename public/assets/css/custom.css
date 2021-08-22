@@ -1,0 +1,455 @@
+.social-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.social-icon {
+	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.social-icon-font {
+	color: white;
+	font-size: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.social-icon-font-lg {
+	color: white;
+	font-size: 40px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.card {
+	-webkit-box-shadow: none !important;
+	background-color: #292e38;
+	border-radius: 5px;
+	border: 0;
+	box-shadow: 0 0 2rem 0 rgb(136 152 170 / 15%);
+	box-shadow: none !important;
+	margin-bottom: 30px;
+	margin-top: 16px !important;
+	margin: auto;
+	max-width: 600px;
+}
+.reward {
+	display: flex;
+}
+.overflow-hidden {
+	overflow: hidden !important;
+}
+.border-0 {
+	border: 0 !important;
+}
+.row {
+	--bs-gutter-x: 1.5rem;
+	--bs-gutter-y: 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: calc(var(--bs-gutter-x) * -.5);
+	margin-right: calc(var(--bs-gutter-x) * -.5);
+	margin-top: calc(var(--bs-gutter-y) * -1);
+}
+.card .table {
+	margin-bottom: 0;
+}
+.table {
+	--bs-table-accent-bg: transparent;
+	--bs-table-active-bg: rgba(0, 0, 0, 0.1);
+	--bs-table-active-color: #212529;
+	--bs-table-bg: transparent;
+	--bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+	--bs-table-hover-color: #212529;
+	--bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+	--bs-table-striped-color: #212529;
+	border-color: #dee2e6;
+	color: #212529;
+	vertical-align: top;
+}
+.table {
+	background-color: transparent;
+	border-radius: 5px;
+	color: #fff;
+	margin-bottom: 1rem;
+	width: 100%;
+}
+.text-light {
+	color: white !important;
+}
+.card .table td,
+.card .table th {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+.table tr td {
+	border-bottom: 1px solid hsla(0, 0%, 100%, .05);
+	font-size: 12px !important;
+	line-height: 1em;
+}
+.table td,
+.table th {
+	font-size: .8125rem;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.table-borderless tbody + tbody,
+.table-borderless td,
+.table-borderless th,
+.table-borderless thead th {
+	border: 0;
+}
+.table td,
+.table th {
+	border-top: 1px solid #e9ecef;
+	padding: 1rem;
+	vertical-align: top;
+}
+.table-borderless > :not(caption) > * > * {
+	border-bottom-width: 0;
+}
+.table > :not(caption) > * > * {
+	background-color: var(--bs-table-bg);
+	border-bottom-width: 1px;
+	box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+	padding: .5rem .5rem;
+}
+.text-right {
+	text-align: right !important;
+}
+#reward-section {
+	/* height: calc(100vh - 18px); */
+}
+#container04 > .wrapper > .inner {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.reward-left {
+	flex: 1;
+}
+.reward-right {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+}
+.reward-right img {
+	width: 100% !important;
+}
+.reward-title {
+	color: rgba(104, 197, 204, 0.871);
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 48px;
+	padding: 0px 0 40px 0;
+}
+.reward-text {
+	color: #abe8ed;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 24px;
+	line-height: normal;
+	padding: 24px 12px 48px 12px;
+}
+
+.timer {
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.timer-digit {
+	font-size: 92.4px;
+}
+
+.timer-digit-text {
+	line-height: 92px;
+	height: 92px;
+}
+
+.timer-symbol {
+	font-size: 46.2px;
+	line-height: 92px;
+	height: 92px;
+}
+
+.invisible {
+	display: none !important;
+}
+
+.timer-title {
+	font-size: 48px;
+	color: rgba(39, 227, 242, 0.871);
+	padding-right: 48px;
+}
+
+.btn-spec {
+	color: white;
+	background: #da2a0eeb !important;
+	font-weight: 400 !important;
+	border: 1px solid #af1a03f8 !important;
+}
+
+.btn-spec:hover {
+	color: white !important;
+	border: 1px solid #b7230ceb !important;
+	border-color: #af1a03f8 !important;
+	background: #b7230ceb !important;
+}
+
+.btn-buy {
+	color: white;
+	background: #0e7edaeb !important;
+	font-weight: 400 !important;
+	border: 1px solid #035caff8 !important;
+}
+
+.btn-buy:hover {
+	color: white !important;
+	border: 1px solid #0362aff8 !important;
+	background: #0359c9eb !important;
+}
+
+.reset {
+	width: inherit !important;
+}
+
+.input-buy {
+	margin: 0 24px;
+}
+
+.timer-container {
+	/* height: 130px; */
+}
+
+.input-container {
+	margin: 20px 0px;
+	color: white;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+.input-container input {
+	height: 32px;
+	border: none;
+	border-radius: 0.25rem;
+	-webkit-border-radius: 0.25rem;
+	-moz-border-radius: 0.25rem;
+	-ms-border-radius: 0.25rem;
+	-o-border-radius: 0.25rem;
+	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+		rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+	outline: none;
+	padding: 2px 0px 2px 8px;
+}
+
+.input-container input:focus {
+	border: none;
+	user-select: none;
+}
+
+.timer-tip {
+	font-size: 20px;
+	padding: 10px 0px 0px 0px;
+	color: rgba(39, 227, 242, 0.871);
+}
+
+.timer-tip-date {
+	font-size: 24px;
+	color: rgba(39, 227, 242, 0.871);
+}
+
+.timer {
+	line-height: 1;
+	cursor: default;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.timer ul {
+	display: inline-flex;
+	-moz-flex-direction: row;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	list-style: none;
+	max-width: 100%;
+	justify-content: center;
+	margin: 15px 0;
+}
+
+.timer ul li {
+	position: relative;
+	z-index: 1;
+}
+
+.timer ul li.delimiter {
+	-moz-flex: 0 1 auto;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+	height: 130px;
+}
+
+.timer ul li.delimiter .symbol {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.timer ul li.number {
+	-moz-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	min-width: 2rem;
+}
+
+.timer ul li.number .item {
+	position: relative;
+}
+
+.timer ul li.number .item .digit {
+	display: block;
+	position: relative;
+	white-space: nowrap;
+}
+
+.timer ul li.number .item .digit .component {
+	display: inline-block;
+	width: 50%;
+}
+
+.timer ul li.number .item .digit.count2 .component {
+	width: 50%;
+}
+
+.timer ul li.number .item .digit.count3 .component {
+	width: 33.3333%;
+}
+
+.timer ul li.number .item .digit.count4 .component {
+	width: 25%;
+}
+
+.timer ul li.number .item .digit.count5 .component {
+	width: 20%;
+}
+
+.timer ul li.number .item .label {
+	display: block;
+	white-space: nowrap;
+}
+
+.timer ul li.number .item .label > * {
+	display: inline-block;
+}
+
+.timer ul li.number .item .label .full {
+	width: 5em;
+}
+
+.timer ul li.number .item .label .abbreviated {
+	width: 3em;
+}
+
+.timer ul li.number .item .label .initialed {
+	width: 1em;
+}
+
+#timer01 ul {
+	width: 30rem;
+}
+
+#timer01 ul li.delimiter {
+	width: 2.5rem;
+	min-width: 1rem;
+}
+
+#timer01 ul li.delimiter .symbol {
+	color: #ffffff;
+}
+
+#timer01 ul li.number .item .digit {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	color: rgba(39, 227, 242, 0.871);
+	line-height: 1em;
+	text-align: inherit;
+}
+
+#timer01 ul li.number .item .label > * {
+	margin-top: calc(0.5rem + 0.25em);
+	letter-spacing: 0.45rem;
+}
+
+#timer01 ul li.number .item .label {
+	font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	font-size: 0.625rem;
+	font-weight: 400;
+	width: calc(100% + 0.45rem);
+	color: #1fc2cf;
+}
+
+#timer01 ul li.number .item .label .full {
+	width: calc(5em + 2.7rem);
+}
+
+#timer01 ul li.number .item .label .abbreviated {
+	width: calc(3em + 1.8rem);
+}
+
+#timer01 ul li.number .item .label .initialed {
+	width: calc(2em + 1.35rem);
+}
+
+#timer02 ul {
+	width: 30rem;
+}
+
+#timer02 ul li.delimiter {
+	width: 2.5rem;
+	min-width: 1rem;
+}
+
+#timer02 ul li.delimiter .symbol {
+	color: #ffffff;
+}
+
+#timer02 ul li.number .item .digit {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	color: rgba(39, 227, 242, 0.871);
+	line-height: 1em;
+	text-align: inherit;
+}
+
+#timer02 ul li.number .item .label > * {
+	margin-top: calc(0.5rem + 0.25em);
+	letter-spacing: 0.45rem;
+}
+
+#timer02 ul li.number .item .label {
+	font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	font-size: 0.625rem;
+	font-weight: 400;
+	width: calc(100% + 0.45rem);
+	color: #1fc2cf;
+}
+
+#timer02 ul li.number .item .label .full {
+	width: calc(5em + 2.7rem);
+}
+
+#timer02 ul li.number .item .label .abbreviated {
+	width: calc(3em + 1.8rem);
+}
+
+#timer02 ul li.number .item .label .initialed {
+	width: calc(2em + 1.35rem);
+}

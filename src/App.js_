@@ -1,0 +1,121 @@
+import React, { useState, useEffect } from "react";
+import NavBar from "./components/navbar";
+import Counters from "./components/counters";
+import Web3 from 'web3';
+import { ABI } from './dreamabi.js';
+import { ethers } from "ethers";
+import { useWallet, UseWalletProvider } from 'use-wallet'
+//const net = "https://bsc-dataseed.binance.org/";
+const net = "https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161";
+const provider = new ethers.providers.JsonRpcProvider(net);
+const NameContract = new ethers.Contract("0x9a422A2544EBCAf38a59fe7Bd6F04DD4c0e74E4b", ABI, provider);
+// const adminaccount = {
+//   publicKey:"0x197Cf27397812b47734092098e53d9CF1EEcaE7b",
+//   privateKey:""
+// }
+// const adminWallet = new ethers.Wallet(adminaccount.privateKey, provider);
+// const SignedContract =NameContract.connect(adminWallet);
+
+function App() {
+
+	const wallet = useWallet();
+	var styledAddress = wallet.account ? wallet.account.slice(0, 4) + ".." + wallet.account.slice(-4) : "";
+	const [counters, setCounters] = useState([
+		{ id: 1, value: 0 },
+		{ id: 2, value: 0 },
+		{ id: 3, value: 0 },
+		{ id: 4, value: 0 }
+	]);
+
+	const handleallInrease = () => {
+		const newCounters = counters.map(c => {
+			c.value += 1;
+			return c;
+		});
+
+		setCounters(newCounters);
+
+	}
+
+
+	const handleIncrement = counter => {
+
+		const newCounters = [...counters];
+
+		//console.log(counter);
+		const index = counters.indexOf(counter);
+
+		newCounters[index] = { ...counters[index] };
+		newCounters[index].value++;
+		setCounters(newCounters)
+	};
+
+	const handleDecrement = counter => {
+		const newCounters = [...counters];
+		const index = counters.indexOf(counter);
+		newCounters[index] = { ...counters[index] };
+		newCounters[index].value--;
+		setCounters(newCounters)
+	};
+
+	const handleConnect = async () => {
+		wallet.connect().then(() => {
+
+			if (wallet.status === "error") {
+				console.log('testing');
+				alert("Plase choose right chain-Ethereum mainnet")
+			}
+		});
+
+		console.log(styledAddress);
+
+	};
+
+	const handleDelete = counterId => {
+		const newCounters = counters.filter(c => c.id !== counterId);
+		setCounters(newCounters)
+	};
+
+	const handleClaim = async () => {
+		let tx = await NameContract.GetBuyBackTimeInterval()
+			.catch((err) => {
+				console.log("contract err", err)
+			});
+		console.log("result:", tx)
+		// console.log(tx.hash);
+	};
+
+	return (
+
+		<div>
+			<NavBar
+				totalCounters={counters.filter(c => c.value > 0).length}
+			/>
+			<main className="container">
+				<Counters
+					counters={counters}
+					onConnect={handleConnect}
+					onIncrement={handleIncrement}
+					onDecrement={handleDecrement}
+					onDelete={handleDelete}
+					onClaim={handleClaim}
+					allIncrease={handleallInrease}
+				/>
+			</main>
+		</div>
+
+	);
+}
+
+export default () => {
+	return (<UseWalletProvider
+		chainId={42}
+		connectors={{
+			// This is how connectors get configured
+			portis: { dAppId: 'my-dapp-id-123-xyz' },
+		}}
+	>
+		<App />
+	</UseWalletProvider>
+	)
+}
