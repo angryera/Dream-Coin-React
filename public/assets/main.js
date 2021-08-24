@@ -1511,6 +1511,8 @@
 		$items = document.querySelectorAll('#' + this.$timer.id + ' ul li .item');
 		$symbols = document.querySelectorAll('#' + this.$timer.id + ' .symbol');
 		$components = document.querySelectorAll('#' + this.$timer.id + ' .component');
+
+		$timerDiv = document.querySelectorAll("#" + this.$timer.id + " .timer");
 		h = 0;
 		f = 0;
 		for (j = 0; j < $components.length; j++) {
@@ -1556,6 +1558,10 @@
 			$components[j].style.lineHeight = h + 'px';
 			$components[j].style.height = h + 'px';
 		}
+		if ($timerDiv[0].offsetHeight > 130)
+			h = $timerDiv[0].offsetHeight - 50;
+		else
+			h = $timerDiv[0].offsetHeight - 20;
 		for (j = 0; j < $symbols.length; j++) {
 			$symbols[j].style.fontSize = f * 0.5 + 'px';
 			$symbols[j].style.lineHeight = h + 'px';

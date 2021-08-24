@@ -16,6 +16,7 @@ function App() {
 		console.log('result:', tx);
 		// console.log(tx.hash);
 	};
+
 	const handleConnect = async () => {
 		wallet.connect().then(() => {
 			if (wallet.status === 'error') {
@@ -26,6 +27,15 @@ function App() {
 
 		console.log(styledAddress);
 	};
+
+	const [BNBAmount, setBNB] = useState(0);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setBNB(BNBAmount => BNBAmount + 1);
+		}, 1000);
+		return () => clearInterval(interval);
+	}, []);
 
 	return (
 		<div>
@@ -1113,7 +1123,14 @@ function App() {
 												)}
 											</ul>
 										</div>
-
+										<div>
+											<span className="raised-bnb">
+												Raised BNB Amount:
+											</span>
+											<span className="raised-bnb">
+												{BNBAmount}
+											</span>
+										</div>
 										<div id="timer01" className="timer">
 											<div className="timer-container">
 												<span className="timer-title">
@@ -1186,14 +1203,14 @@ function App() {
 											<span className="timer-tip">
 												If you don't have DreamCoin, hod 100 Dreams as free.
 											</span>
-											<ul class="outline-button buttons">
-												<li><button class="btn-buy">Airdrop for Free</button></li>
+											<ul className="outline-button buttons">
+												<li><button className="btn-buy">Airdrop for Free</button></li>
 											</ul>
 											<span className="timer-tip">
 												Exchange old dream as new DREAM coin
 											</span>
-											<ul class="outline-button buttons">
-												<li><button class="btn-buy">Exchange with old Dream.</button></li>
+											<ul className="outline-button buttons">
+												<li><button className="btn-buy">Exchange with old Dream.</button></li>
 											</ul>
 
 										</div>
@@ -1280,7 +1297,7 @@ function App() {
 												</span>
 												<input type="text" className="input-buy"></input>
 												<ul className="outline-button buttons reset">
-													<li><button class="btn-buy">Buy</button></li>
+													<li><button className="btn-buy">Buy</button></li>
 												</ul>
 											</div>
 											<span className="timer-tip-date">

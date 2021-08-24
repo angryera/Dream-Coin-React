@@ -32,6 +32,12 @@
 	margin: auto;
 	max-width: 600px;
 }
+@media (max-width: 736px) {
+	.reward {
+		display: flex;
+		flex-direction: column;
+	}
+}
 .reward {
 	display: flex;
 }
@@ -76,11 +82,21 @@
 .text-light {
 	color: white !important;
 }
+
 .card .table td,
 .card .table th {
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
 }
+
+@media (max-width: 736px) {
+	.card .table td,
+	.card .table th {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+}
+
 .table tr td {
 	border-bottom: 1px solid hsla(0, 0%, 100%, .05);
 	font-size: 12px !important;
@@ -179,6 +195,16 @@
 	font-size: 48px;
 	color: rgba(39, 227, 242, 0.871);
 	padding-right: 48px;
+	padding-left: 48px;
+}
+
+@media (max-width: 564px) {
+	.timer-title {
+		padding-right: 0px;
+		padding-left: 0px;
+		font-size: 32px;
+		color: rgba(39, 227, 242, 0.871);
+	}
 }
 
 .btn-spec {
@@ -251,6 +277,14 @@
 	font-size: 20px;
 	padding: 10px 0px 0px 0px;
 	color: rgba(39, 227, 242, 0.871);
+}
+
+@media (max-width: 736px) {
+	.timer-tip {
+		font-size: 16px;
+		padding: 10px 0px 0px 0px;
+		color: rgba(39, 227, 242, 0.871);
+	}
 }
 
 .timer-tip-date {
@@ -359,7 +393,6 @@
 .timer ul li.number .item .label .initialed {
 	width: 1em;
 }
-
 #timer01 ul {
 	width: 30rem;
 }
@@ -452,4 +485,20 @@
 
 #timer02 ul li.number .item .label .initialed {
 	width: calc(2em + 1.35rem);
+}
+
+@media (max-width: 736px) {
+	#timer01 ul {
+		width: 24rem;
+	}
+
+	#timer02 ul {
+		width: 24rem;
+	}
+}
+
+.raised-bnb {
+	font-size: 48px;
+	color: #1fc2cf;
+	padding: 0 5px;
 }
