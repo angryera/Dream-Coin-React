@@ -496,9 +496,24 @@
 		width: 24rem;
 	}
 }
-
 .raised-bnb {
 	font-size: 48px;
 	color: #1fc2cf;
 	padding: 0 5px;
+}
+
+@media (max-width: 800px) {
+	.raised-bnb {
+		font-size: 36px;
+		color: #1fc2cf;
+		padding: 0 5px;
+	}
+}
+
+@media (max-width: 560px) {
+	.raised-bnb {
+		font-size: 21px;
+		color: #1fc2cf;
+		padding: 0 5px;
+	}
 }

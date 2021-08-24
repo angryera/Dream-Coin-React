@@ -32,7 +32,7 @@ function App() {
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			setBNB(BNBAmount => BNBAmount + 1);
+			setBNB(BNBAmount => BNBAmount + 10000);
 		}, 1000);
 		return () => clearInterval(interval);
 	}, []);
