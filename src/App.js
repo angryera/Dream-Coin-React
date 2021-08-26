@@ -27,12 +27,15 @@ function App() {
 
 		console.log(styledAddress);
 	};
-
 	const [BNBAmount, setBNB] = useState(0);
+
+	const handleBNBAmount = async() => {
+		setBNB(BNBAmount => BNBAmount + 10000);
+	}
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			setBNB(BNBAmount => BNBAmount + 10000);
+			handleBNBAmount();
 		}, 1000);
 		return () => clearInterval(interval);
 	}, []);
